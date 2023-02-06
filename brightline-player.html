@@ -11,17 +11,24 @@
 	<div class="bl-video-player">
 		<div class="bl-container">
 			<div class="bl-title">
-				<h1 class="bl-title-style">BrightLine JS Candidate Test</h1>
+        <div class="bl-header-buttons">
+          <button class="bl-header-button"><span class="fa fa-play"></span></button>
+          <button class="bl-header-button"><span class="fa fa-pause"></span></button>
+          <button class="bl-header-button"><span class="fa fa-repeat"></span></button>
+          <button class="bl-header-button"><span class="fa fa-stop"></span></button>
+        </div>
 			</div>
 			<div class="bl-video-list">
 				<div class="bl-list-btns" id="buttons-list">
 				</div>
 				<div class="bl-video-preview">
-          <div class="bl-video-background">
-            <video class="bl-video" id="vPreview"></video>
-          </div>
+          <video class="bl-video" id="vPreview"></video>
 				</div>
 			</div>
+      <div class="bl-footer">
+        <div class="bl-footer-second">
+        </div>
+      </div>
 		</div>
 		<div class="bl-full-screen">
 			<video id="full-video" class="bl-video-style"></video>

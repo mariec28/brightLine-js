@@ -4,7 +4,7 @@ let preview = document.getElementById('vPreview');
 let currentIndex = 0
 
 /** read json from url or local json **/
-fetch("./URL:https://cdn-media.brightline.tv/training/demo.json")
+fetch("https://cdn-media.brightline.tv/training/demo.json")
 .then(function (response) {
   return response.json()
 })

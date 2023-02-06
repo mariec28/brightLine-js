@@ -1,0 +1,145 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #022A40;
+}
+
+.bl-video-player{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bl-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.bl-video-list {
+  display: flex;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.bl-list-btns {
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  height:  25rem;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+
+.bl-video{
+  width: 100%;
+  height: auto;
+}
+
+.bl-list-btns::-webkit-scrollbar {
+  width: 0px;       
+}
+
+.bl-list-btns::-webkit-scrollbar-track {
+  background: none;
+}
+
+.bl-list-btns::-webkit-scrollbar-thumb {
+  background-color: none;
+  border-radius: none;
+  border: 0px solid;
+}
+
+.bl-btn-video{
+  width: 90%;
+  background-image: linear-gradient(144deg,#072A40, #072A40 50%,#F9F7F0);
+  border-radius: 8px;
+  color: #F9F7F0;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  margin: 5px 5px;
+}
+
+.bl-btn-video-focus{
+  background-image: linear-gradient(144deg,#F9F7F0, #072A40 50%,#178CA4);
+  color: #F9f7f0;
+  font-weight: bold;
+  border-width: 5px;
+  border-color: #178CA4;
+}
+
+.bl-video-preview{
+  align-self: center;
+  width: 60%;
+  background-color: #E3DCD2;
+  background-repeat: no-repeat;
+}
+
+.bl-video-background{
+  width: 100%;
+  height: 100%;
+  background-image: url("./345-3454504_transparent-background-television-png.png");
+}
+
+.bl-full-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+.bl-title-style {
+  color: #F9F7F0;
+  text-align: center;
+}
+
+.bl-item-style {
+  margin: 0;
+}
+
+.bl-video-style{
+  height: 100%;
+  width: 100%;
+  overflow-clip-margin: unset;
+  object-fit: unset;
+  overflow: unset;
+}
+
+@media (max-width: 480px) {
+  .bl-video-list {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  
+  .bl-video-preview{
+    width: 100%;
+  }
+
+  .bl-btn-video{
+    margin-top: 10px;
+    height: 3rem;
+    width: 85%;
+  }
+  .bl-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+    Overflow-y:scroll;
+  }
+}

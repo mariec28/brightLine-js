@@ -6,10 +6,12 @@ let currentIndex = 0
 /** read json from url or local json **/
 fetch("https://cdn-media.brightline.tv/training/demo.json")
 .then(function (response) {
-  return response.json()
+  if (response.headers.get("Content-Length") != 0) {
+    return response.json();
+  }
 })
 .then(function (data) {
-  if(data != undefined){  
+  if(data != undefined && !isEmptyData(data)){  
     let videos = data["streams"]
     let btnId = 0
     for (let i = 0; i < videos.length; i++) {
@@ -146,4 +148,13 @@ function nextPrevButton(idButton){
   extensionVideo = getExtensionVideo(videoUrl);
   preview.src = videoUrl;
   preview.setAttribute("type","video/"+extensionVideo);
+}
+
+function isEmptyData(data) {
+  for(var prop in data) {
+    if(Object.prototype.hasOwnProperty.call(data, prop)) {
+      return false;
+    }
+  }
+  return JSON.stringify(data) === JSON.stringify({});
 }
